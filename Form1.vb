@@ -72,7 +72,7 @@ Public Class Form1
         '     posl.CommSetting = com1;
         '     //tcp
         com1.CommType = "TCP"
-        com1.DestIP = "192.168.1.35"
+        com1.DestIP = "192.168.1.31"
         com1.DestPort = "10009"
         com1.TimeOut = "50000"
         posl.CommSetting = com1
@@ -147,7 +147,7 @@ Public Class Form1
 
         ' tcp
         com1.CommType = "TCP"
-        com1.DestIP = "192.168.1.35"
+        com1.DestIP = "192.168.1.31"
         com1.DestPort = "10009"
         com1.TimeOut = "50000"
         posl.CommSetting = com1
