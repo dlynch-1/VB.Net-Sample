@@ -72,7 +72,7 @@ Public Class Form1
         '     posl.CommSetting = com1;
         '     //tcp
         com1.CommType = "TCP"
-        com1.DestIP = "192.168.1.31"
+        com1.DestIP = "192.168.1.35"
         com1.DestPort = "10009"
         com1.TimeOut = "50000"
         posl.CommSetting = com1
@@ -80,6 +80,8 @@ Public Class Form1
         payRequest.TenderType = payRequest.ParseTenderType(cmbCardType.SelectedItem)
         payRequest.TransType = payRequest.ParseTransType(cmbTransType.SelectedItem)
         payRequest.ECRRefNum = txtRef.Text
+        payRequest.SigSavePath = "C:\Temp\"
+        payRequest.ExtData = "<SignatureCapture>1</SignatureCapture><GetSign>1</GetSign><SignUploadFlag>1</SignUploadFlag>"
         'payRequest.Amount = "1050"   ' this will seed the transaction amount
 
         posl.PaymentRequest = payRequest
@@ -187,7 +189,7 @@ Public Class Form1
 
         ' tcp
         com1.CommType = "TCP"
-        com1.DestIP = "192.168.1.35"
+        com1.DestIP = "192.168.1.31"
         com1.DestPort = "10009"
         com1.TimeOut = "50000"
         posl.CommSetting = com1
